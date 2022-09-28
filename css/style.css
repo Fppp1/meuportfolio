@@ -1,0 +1,264 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: #212121;
+    overflow-x: hidden;
+}
+
+.navbar ul{
+    cursor: pointer;
+    list-style-type: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.10rem;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+.navbar ul li{
+    margin-right: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.navbar ul li:hover{
+    color: aqua;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.texto-principal{
+    position: relative;
+    top: 35vh;
+    padding: 20px 20px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+.texto-principal img{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.texto-principal button{
+    cursor: pointer;
+    padding: 10px 10px;
+    border: white 1px solid;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: #212121;
+    color: white;
+}
+
+.texto-principal button:hover{
+    transition: all 800ms;
+    background-color: white;
+    color: black;
+}
+
+.corpo{
+    position: relative;
+    top: 5vh;
+    right: 30vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    animation: flutuar 5s ease-in-out infinite;
+    
+}
+
+@media ( max-width: 768px ) {
+    .hamburguer{
+        position: relative;
+        left: 20vh;
+        display: block;
+        align-items: end;
+        justify-content: end;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu-bar{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0px;
+        border-radius: 0 0 20px 20px;
+        background-color: black;
+        justify-content: center;
+        text-align: center;
+        flex-direction: row;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item-bar{
+        margin: 16px 0;
+    }
+
+    .nav-menu-bar.active{
+        left: 0;
+    }
+
+    .corpo{
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+        top: 30vh;
+        right: 10vh;
+    }
+
+    .texto-principal{
+        width: 100%;
+        position: relative;
+        top: 30vh;
+    }
+
+}
+
+@keyframes flutuar {
+    0%, 100%{
+        transform: translateY(0px);   
+    }
+
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+#sobre h2{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    top: 60vh;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#sobre p{
+    color: white;
+    font-family: 'Roboto Slab', monospace;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 70vh;
+}
+
+.formulario-corpo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350vh;
+    bottom: 10vh;
+  }
+
+  .formulario{
+    border-radius: 10px;
+    height: 430px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: rgba(13, 199, 199, 0.637);
+    padding: 30px 15px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    width: 315px;
+  }
+
+  .seletorsubmit{
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    min-width: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    background-color:  rgba(13, 199, 199, 0.637);
+    transition: all 500ms;
+  }
+
+  .seletorsubmit:hover{
+    background: #fff;
+    color: #100126;
+  }
+
+  .nomeprimario{
+    border: 0.5px solid #fff;
+    border-radius: 4.5px;
+
+  }
+
+  .emailsecundario{
+    border: 0.5px solid #fff;
+    border-radius: 4.5px;
+  }
+
+  .mensagens{
+    border: 0.5px solid #fff;
+    border-radius: 10px;
+  }
+
+  .formulario h1{
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0px;
+  }
+  .formulario p{
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 0px;
+
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: #DCDCDC;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+    background: #808080;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 15px;
+    background: #808080;
+}
